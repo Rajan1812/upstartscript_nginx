@@ -1,0 +1,10 @@
+The "main" file can be use to execute a certaind command on upstart.
+Steps:-
+
+> create a file "myprogram.conf" in the /etc/init/
+> add the content of main file into the /etc/init/myprogram.conf (with desired modification)
+> Create a soft link of the file to /etc/init.d (without the extension)
+      $ln -s /etc/init/myprogram.conf /etc/init.d/myprogram   
+Now you can start your program with as a service
+      $service myprogram start
+      $service myprogram stop
