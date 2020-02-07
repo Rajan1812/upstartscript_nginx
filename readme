@@ -8,3 +8,6 @@ Steps:-
 Now you can start your program with as a service
       $service myprogram start
       $service myprogram stop
+
+Note we can calso check if the syntax for the upstart script is correct using the below command
+      $init-checkconf myprogram.conf
