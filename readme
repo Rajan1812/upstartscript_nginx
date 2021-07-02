@@ -11,3 +11,16 @@ Now you can start your program with as a service
 
 Note we can calso check if the syntax for the upstart script is correct using the below command
       $init-checkconf myprogram.conf
+
+
+==============================  FOR DEBIAN SYSTEMS =============================
+To start a script/binary using systemctl 
+-------------------
+1. copy the debian file:--> sudo vi /etc/init.d/<file_name>   Ex:- /etc/init.d/node and change the vaiables.
+2. Make sure the script is executable:
+chmod +x /etc/init.d/node
+3. Enable the daemon with:
+update-rc.d node defaults
+4. Start the service with:
+systemctl start  <same as NAME variable in the script>
+ex: - # systemctl start nodeexp
